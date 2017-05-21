@@ -1,0 +1,26 @@
+{
+  "name": "rock-list",
+  "version": "1.0.0",
+  "description": "app for compiling best rock bands into database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlovell149/Rock-List-Handlebar-MVC.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlovell149/Rock-List-Handlebar-MVC/issues"
+  },
+  "homepage": "https://github.com/alexlovell149/Rock-List-Handlebar-MVC#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.13.0"
+  }
+}
