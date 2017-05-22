@@ -1,0 +1,52 @@
+<h1>Let's Rock</h1>
+
+<h2>Not Hall of Fame</h2>
+
+<ul>
+  {{#each bands}}
+    {{#unless this.hall_of_fame}}
+      <li>
+        {{this.band_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="hall of fame" value="false">
+          <button type="submit">Not Hall of Famer</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Hall of Fame</h2>
+
+<ul>
+  {{#each bands}}
+    {{#if this.hall_of_fame}}
+      <li>
+        {{this.band_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="hall of fame" value="true">
+          <button type="submit">Hall of Famer</button>
+        </form>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Band</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="band">Band Name:</label>
+    <input type="text" id="band" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="">Hall of Fame?</label><br>
+    <input type="radio" name="hall of fame" value="1" checked> Yes!<br>
+    <input type="radio" name="hall of fame" value="0"> No
+  </div>
+
+  <button type="submit">Add Band</button>
+</form>
