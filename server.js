@@ -4,7 +4,7 @@ var methodOverride = require("method-override");
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
 // set layout for handlebars to defaultlayout main
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main", }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.

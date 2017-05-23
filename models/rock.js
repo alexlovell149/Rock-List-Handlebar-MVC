@@ -17,7 +17,7 @@ var rock = {
       cb(res);
     });
   }
-};
+}
 
 // Export the database functions for the controller (rock_controller.js).
 module.exports = rock;
