@@ -13,9 +13,9 @@
                   <div class="input-group">
                       <p class="lead"> {{this.band_name}} </p>
                       <span class="input-group-btn">
-                        <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <form action="rock/update/{{this.id}}?_method=PUT" method="POST">
                             <input type="hidden" name="hall_of_fame" value="true">
-                            <button class="btn btn-default" type="submit">Not Hall of Famer</button>
+                            <button class="btn btn-default" type="submit">Hall of Famer</button>
                         </form>
                       </span>
                   </div>

@@ -22,7 +22,7 @@ router.get("/rock", function(req, res){
 });
 
 router.post("/rock/create", function(req, res) {
-  rock.insertOne(["band name"], [
+  rock.insertOne(["band_name"], [
    req.body.band_name], function(data) {
     res.redirect("/rock");
   });
@@ -35,7 +35,7 @@ router.put("/rock/update/:id", function(req, res) {
   console.log("condition", condition);
 
   rock.updateOne({
-    "hall of fame" : req.body.hall_of_fame
+    "hall_of_fame" : req.body.hall_of_fame
   }, condition, function(data) {
     res.redirect("/rock");
   });
