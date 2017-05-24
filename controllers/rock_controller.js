@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
 
 router.get("/rock", function(req, res){
 	rock.selectAll(function(data){
-		var hbsObject = {rock:data};
+		var hbsObject = {bands:data};
 
 		console.log(hbsObject);
 
