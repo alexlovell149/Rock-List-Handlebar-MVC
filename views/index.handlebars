@@ -1,12 +1,12 @@
 <div class="container">
 
     <div class="jumbotron">
-    <h1>Let's Rock</h1>
+    <p id="head">Let's Rock</p>
     </div>
 
-      <div class="row">
-      <h3>Not Hall of Fame</h3>
-        <div class="col-md-5">
+      <div id="not-hall-of-fame" class="row">
+        <div class="col-md-4 col-md-offset-1">
+        <h2>Not Hall of Fame</h2>
         <ul class="list-group">
           {{#each bands}}
               {{#unless this.hall_of_fame}}
@@ -16,8 +16,9 @@
                       <span class="input-group-btn">
                         <form action="rock/update/{{this.id}}?_method=PUT" method="POST">
                             <input type="hidden" name="hall_of_fame" value="true">
+                            
                             <button class="btn btn-default" type="submit">Hall of Famer</button>
-                            <p>Click if you think this band belongs in the Hall of Fame</p>
+                            
                         </form>
                       </span>
                   </div>
@@ -26,11 +27,10 @@
           {{/each}}
         </ul>
         </div>
-</div>
-<h2>Hall of Fame</h2>
 
-<div class="row">
+
     <div class="col-md-4 col-md-offset-2">
+    <h2>Hall of Fame</h2>
       <div class="panel panel-default">
         <ul class="list-group">
         {{#each bands}}
@@ -45,13 +45,15 @@
     </div>
   </div>
 
+
 <div class="col-md-8">
-<p>Add a Band</h2>
+<h2>Add a Band</h2>
 <form class="create-update-form" action="rock/create" method="POST">
+<p id="add">Click if you think this band belongs in the Hall of Fame</p>
 
 
   <div class="form-group">
-    <textarea class="form-control input-med" type="text" name="band_name"></textarea>
+    <textarea class="form-control input" type="text" name="band_name"></textarea>
    
   </div>
 
