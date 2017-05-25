@@ -4,6 +4,7 @@ var methodOverride = require("method-override");
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
+// setting the port for heroku to deploy on
 var port = process.env.PORT || 3000;
 
 var app = express();
